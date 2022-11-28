@@ -39,12 +39,8 @@ export class MongoDB implements IDriver {
             mongoose.connect(process.env.MONGO_CONNECTION_STRING, connectionOptions)
         })
 
-        // register all models
-        const dirPath = path.resolve(__dirname + './../models' )
-        const files = fs.readdirSync(dirPath)
-        files.forEach((file) => {
-            require(dirPath + '/' + file)
-        })
+        // register all models. issue with auto walk dir, using manual
+        require('../models/Station')
 
         this.Station = mongoose.models.Station;
     }

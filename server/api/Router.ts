@@ -25,15 +25,15 @@ export class Router {
 
 
     static getAllControllers(): Controller[] {
-        const res: string[] = this.getFiles(__dirname + '/controllers');
-        return res.map((file: string) => (
-            // to make it synchronous. Only ran once - on startup
-            // in some cases may be considered a vulnerability - if attacker can add file to
-            // controllers folder - this can execute code with application user rights and envs
-            // but generally this would mean that attacker can change any other file to execute
-            // code anyway
-            require(file)
-        ));
+        // issues with auto walk folder, falling back to manual
+        return [
+            require('./controllers/public/Health'),
+            require('./controllers/public/station/delete'),
+            require('./controllers/public/station/add'),
+            require('./controllers/public/station/update'),
+            require('./controllers/public/station/get'),
+            require('./controllers/public/station/list'),
+        ]
     }
     static getMiddlewaresOrdered(): Middleware[] {
         return [
