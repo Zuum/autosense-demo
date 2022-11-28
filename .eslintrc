@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 23 / 11 / 2022
+ * Created by Illia Polishchuk for autoSense.ch as demo
+ * All rights reserved
+ */
+
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off"
+  }
+}

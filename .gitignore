@@ -1,0 +1,10 @@
+.idea
+dist
+typings
+node_modules
+.env
+data
+.migrate
+build
+/tmp
+env.js
