@@ -3,18 +3,25 @@ services:
   mongo:
     image: mongo
     hostname: mongo
+    networks:
+      - app-network
     ports:
       - '27017-27019:27017-27019'
   app:
-    build: .
-    volumes:
-      - ./:/home/app
-      - /home/app/node_modules
+    build:
+      dockerfile: ./Dockerfile
     ports:
       - '3000:3000'
     stdin_open: true
     tty: true
+    networks:
+      - app-network
     depends_on:
       - mongo
     environment:
       - MONGO_CONNECTION_STRING=mongodb://mongo:27017/data
+      - NODE_ENV=development
+      - PORT=3000
+      - API_SECRET=secret
+networks:
+  app-network:
