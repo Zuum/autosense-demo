@@ -1,13 +1,19 @@
-# Requirements
+# Task
 
 [Original task pdf](https://github.com/Zuum/autosense-demo/blob/master/docs/task.pdf)
 
 # API Reference
 
 [Postman](https://documenter.getpostman.com/view/24654802/2s8YsxuBWm)
-[Swagger]()
+[Swagger](https://autosense-demo.tk/)
+
+# Demo
+
+You can make request to a deployed version of a server at `https://autosense-demo.tk`
 
 # Running locally
+
+Assuming you have docker installed on your system and project cloned, you can start up project by running command from project root cwd:
 
 `docker compose up`
 
