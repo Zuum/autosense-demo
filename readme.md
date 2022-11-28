@@ -1,6 +1,6 @@
 # Requirements
 
-[Original task pdf]()
+[Original task pdf](https://github.com/Zuum/autosense-demo/blob/master/docs/task.pdf)
 
 # API Reference
 
@@ -31,4 +31,4 @@
 
 ## Cache
 [Quad-trees are used for location services](https://engblog.yext.com/post/geolocation-caching)
-
+Not implemented currently. DB indexes provide acceptable baseline performance.
