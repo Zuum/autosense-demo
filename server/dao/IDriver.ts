@@ -4,7 +4,7 @@
  * All rights reserved
  */
 
-import {IStation, IStationFilter, IStationUpdate} from "./models/Station";
+import {IStation, IStationFilter, IStationUpdate} from "./models/IStation";
 
 export interface IDriver {
     getStations(filterParams: IStationFilter): Promise<IStation[]>
